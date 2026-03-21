@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Biblioteca Dallari</title>
+  <meta name="description" content="Biblioteca Dallari: biblioteca privata nel comprensorio ceramico emiliano, tra lettura, lavoro e condivisione.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="background-shape shape-one" aria-hidden="true"></div>
+  <div class="background-shape shape-two" aria-hidden="true"></div>
+
+  <header class="hero section reveal">
+    <p class="eyebrow">Biblioteca Dallari</p>
+    <h1>Un luogo per chi legge.<br>Un luogo per chi lavora.<br>Un luogo per chi si ferma.</h1>
+    <p class="hero-copy">Nel cuore del comprensorio ceramico emiliano, una biblioteca privata pensata per chi cerca una pagina, una pausa, una conversazione.</p>
+    <a class="btn" href="#unisciti">Scopri come diventare socio</a>
+  </header>
+
+  <main>
+    <section class="section reveal" id="chi-siamo">
+      <h2>Chi siamo</h2>
+      <p>La Biblioteca Dallari è una biblioteca privata nata nel cuore del comprensorio ceramico emiliano, uno di quei territori dove il lavoro manuale e l'ingegno si intrecciano da generazioni.</p>
+      <p>Non è una biblioteca pubblica. È qualcosa di più preciso: uno spazio pensato per chi, tra un turno e l'altro, tra un progetto e il prossimo, sente il bisogno di una pagina, di una pausa, di una conversazione.</p>
+    </section>
+
+    <section class="section reveal" id="servizi">
+      <h2>I nostri servizi</h2>
+      <div class="cards">
+        <article class="card">
+          <h3>Biblioteca</h3>
+          <p>Un catalogo curato di volumi accessibili ai soci. Narrativa, saggistica, tecnica, filosofia: libri scelti con attenzione, non accumulati per caso.</p>
+        </article>
+
+        <article class="card">
+          <h3>Book Crossing &amp; Book Sharing</h3>
+          <p>Porta un libro. Prendi un libro. Lascia qualcosa di tuo, scopri qualcosa di qualcun altro.</p>
+          <p>Ogni volume che entra porta con sé la storia di chi lo ha tenuto prima: i libri circolano, cambiano mani, trovano nuovi lettori.</p>
+        </article>
+
+        <article class="card">
+          <h3>Gruppi di lettura</h3>
+          <p><strong>Mattina, prima del lavoro.</strong><br>Un quarto d'ora, mezz'ora. Un capitolo, una riflessione, qualcuno con cui condividerla prima di iniziare la giornata.</p>
+          <p><strong>Pausa pranzo.</strong><br>Aperti a tutti, soci e non, in formato libero e senza obbligo di preparazione. Basta portarsi.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section reveal" id="perche-dallari">
+      <h2>Perché la Dallari</h2>
+      <p>I libri non sono un lusso. Sono uno strumento, come le mani, come gli occhi.</p>
+      <p>La Biblioteca Dallari nasce dalla convinzione che la cultura debba stare dove stanno le persone: nei territori produttivi, negli spazi di lavoro, nelle pause in cui si ritrova il senso di quello che si fa.</p>
+      <p>Siamo una biblioteca privata perché crediamo nella cura diretta: degli spazi, dei volumi, di chi li usa.</p>
+    </section>
+
+    <section class="section section-cta reveal" id="unisciti">
+      <h2>Unisciti</h2>
+      <p>La Biblioteca Dallari è aperta ai soci del comprensorio e a chiunque voglia farne parte. Partecipare è semplice. Restare, ancora di più.</p>
+      <nav class="cta-links" aria-label="Azioni principali">
+        <a href="#">Scopri come diventare socio</a>
+        <a href="#">Consulta il catalogo</a>
+        <a href="#">Iscriviti a un gruppo di lettura</a>
+      </nav>
+    </section>
+  </main>
+
+  <footer class="footer reveal">
+    <p>Biblioteca Dallari - Nel comprensorio ceramico emiliano.</p>
+    <p>Libri che restano. Persone che passano. Idee che circolano.</p>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+
+    document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+  </script>
+</body>
+</html>
