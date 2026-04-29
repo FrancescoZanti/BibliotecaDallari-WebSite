@@ -1,23 +1,21 @@
 # Biblioteca Dallari - Sito statico
 
-Sito statico semplice pronto per hosting su Azure Static Web Apps.
+Sito statico semplice pronto per hosting su GitHub Pages.
 
 ## Struttura
 
 - `index.html`: contenuto della pagina
 - `styles.css`: stile e responsive design
-- `staticwebapp.config.json`: configurazione routing e header per Azure Static Web Apps
+- `staticwebapp.config.json`: configurazione legacy per Azure Static Web Apps, non usata da GitHub Pages
 - `copy/copy.md`: copy sorgente
+- `.github/workflows/github-pages.yml`: pubblicazione automatica su GitHub Pages
 
-## Deploy su Azure Static Web Apps
+## Deploy su GitHub Pages
 
-1. Crea una nuova risorsa Azure Static Web Apps dal portale Azure.
-2. Collega il repository GitHub.
-3. Usa queste impostazioni build:
-   - App location: `/`
-   - Api location: (vuoto)
-   - Output location: `/`
-4. Esegui il commit e push su `main`: il workflow GitHub Actions creato da Azure pubblicherà il sito.
+1. Apri le impostazioni del repository su GitHub.
+2. Vai in `Settings` > `Pages`.
+3. In `Build and deployment`, seleziona `GitHub Actions` come source.
+4. Esegui il push su `main`: il workflow pubblicherà automaticamente il sito.
 
 ## Avvio locale
 
